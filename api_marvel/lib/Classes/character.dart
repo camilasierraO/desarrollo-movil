@@ -30,7 +30,7 @@ class Character {
     return Character(
       name: json['name'] ?? '',
       image: "${json['thumbnail']['path']}.${json['thumbnail']['extension']}",
-      description: json['description'] ?? '',
+      description: json['description'] ?? 'd',
       comicsCount: json['comics']['available'] ?? 0,
       seriesCount: json['series']['available'] ?? 0,
       storiesCount: json['stories']['available'] ?? 0,

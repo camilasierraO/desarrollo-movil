@@ -1,3 +1,4 @@
+import 'package:api_marvel/Screens/detail_page.dart';
 import 'package:api_marvel/Screens/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Principal(),
+      home: Second(),
     );
   }
 }
