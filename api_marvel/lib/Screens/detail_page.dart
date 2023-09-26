@@ -37,8 +37,6 @@ class _SecondState extends State<Second> {
     String queryString = Uri(queryParameters: queryParams).query;
     final response = await http.get(Uri.parse('$apiUrl?$queryString'));
 
-    print(queryString);
-
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       final charactersData = data['data']['results'];
