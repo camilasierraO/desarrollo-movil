@@ -57,6 +57,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+      - family: Marvel
+        fonts:
+          - asset: fonts/marvel.ttf
   
 
   # The following line ensures that the Material Icons font is

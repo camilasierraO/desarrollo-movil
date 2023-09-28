@@ -28,8 +28,8 @@ class SelectedCharacter extends StatelessWidget {
         Text(
           title, // El texto
           style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
           ),
         ),
 
@@ -67,46 +67,46 @@ class SelectedCharacter extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.all(1),
-                child: Card(
-                  elevation: 6,
-                  shadowColor: const Color.fromARGB(255, 68, 26, 23),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(
-                            10.0), // Espacio alrededor de la imagen
-                        child: Container(
-                          child: Image.network(
-                            image,
-                            fit: BoxFit.cover,
+                  padding: const EdgeInsets.all(1),
+                  child: SizedBox(
+                    width: 500, // Ancho fijo deseado
+                    height: 400, // Alto fijo deseado
+                    child: Card(
+                      color: Colors.black,
+                      elevation: 6,
+                      shadowColor: const Color.fromARGB(255, 68, 26, 23),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(
+                                10.0), // Espacio alrededor de la imagen
+                            child: Image.network(
+                              image,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10, // Espacio entre la imagen y el título
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 7.0),
-                        child: Text(
-                          title,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
+                          Center(
+                            child: Text(
+                              title,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 23,
+                                fontFamily: 'Marvel',
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-              ),
+                    ),
+                  )),
               const SizedBox(height: 16),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -125,14 +125,17 @@ class SelectedCharacter extends StatelessWidget {
                     Container(
                       width: double
                           .infinity, // Ancho infinito para ocupar todo el ancho de la pantalla
-                      height: 1.0, // Grosor de la línea
+                      height: 1.5, // Grosor de la línea
                       color: Colors.black, // Color de la línea
                     ),
                     const SizedBox(height: 20.0),
                     const Center(
                       child: Text("Descripción",
                           style: TextStyle(
-                              fontWeight: FontWeight.w600, fontSize: 20),
+                              fontWeight: FontWeight.w900,
+                              fontSize: 18,
+                              fontFamily: 'Marvel',
+                              color: Color(0xFFF11E22)),
                           textAlign: TextAlign
                               .center), // Centra el texto de la descripción
                     ),
@@ -140,29 +143,28 @@ class SelectedCharacter extends StatelessWidget {
                     Center(
                       child: Text(description,
                           style: const TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 18),
+                              fontWeight: FontWeight.w700, fontSize: 16),
                           textAlign: TextAlign
                               .center), // Centra el texto de la descripción
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
+                // ignore: prefer_const_constructors
                 padding: EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Align(
                       alignment: Alignment.center, // Centra horizontalmente
-                      child: Text(
-                        'Series',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize:
-                              16, // Tamaño de fuente para la palabra "Series"
-                        ),
-                      ),
+                      child: Text('Series',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Marvel',
+                              fontSize: 18,
+                              color: Color(0xFFF11E22))),
                     ),
                     SizedBox(
                       height: 90,
@@ -172,7 +174,7 @@ class SelectedCharacter extends StatelessWidget {
                           children: seriesNames.map((series) {
                             return Card(
                               child: Container(
-                                padding: EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8),
                                 child: Text(series),
                               ),
                             );
