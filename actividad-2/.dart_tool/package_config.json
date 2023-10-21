@@ -27,7 +27,7 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/ospin/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.9.1",
+      "rootUri": "file:///C:/Users/ospin/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -68,7 +68,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-08T21:56:42.574307Z",
+  "generated": "2023-10-21T16:42:54.837198Z",
   "generator": "pub",
-  "generatorVersion": "3.0.7"
+  "generatorVersion": "3.1.3"
 }
